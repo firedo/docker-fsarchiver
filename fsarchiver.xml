@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container version="2">
+<Name>fsarchiver</Name>
+<Project>http://fsarchiver.org/</Project>
+<Changes>
+</Changes>
+<Category>Backup:</Category>
+<Support></Support>
+<Overview>fsarchiver CLI tool for backing up and restoring *.fsa files. [br][br]Passthrough physical/loop devices with the 'device' type. Mount loop devices with 'losetup /dev/loopXX /mnt/user/loopFile.img' in the host. Add a Path that contains or will contain the fsarchiver *.fsa backup files. 'nano' and 'screen' tools are included. [br][br]Privileges required for accessing the host devices. [br][br]Example commands in the Console: [br]- screen fsarchiver savefs /data/backup.fsa /dev/nvme1n1p1 /dev/nvme1n1p2 [br]- fsarchiver archinfo /data/backup.fsa [br]- screen fsarchiver restfs /data/backup.fsa id=0,dest=/dev/nvme1n1p1 id=1,dest=/dev/nvme1n1p2 </Overview>
+<Network>bridge</Network>
+<MyIP/>
+<Shell>bash</Shell>
+<Registry>https://registry.hub.docker.com/u/firedo/fsarchiver/</Registry>
+<Repository>firedo/fsarchiver</Repository>
+<BindTime>true</BindTime>
+<Privileged>true</Privileged>
+<DonateText/>
+<DonateLink/>
+<Requires/>
+<Environment>
+<Variable>
+<Name></Name>
+<Value></Value>
+</Variable>
+</Environment>
+<Data>
+<Volume>
+<HostDir></HostDir>
+<ContainerDir>/data</ContainerDir>
+<Mode>rw</Mode>
+</Volume>
+</Data>
+</Container>
